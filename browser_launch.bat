@@ -44,7 +44,7 @@ echo.
 echo Creating LlamaChat AI Assistant...
 mkdir chatbot_simple 2>nul
 
-:: Create the enhanced Ollama chatbot with dark mode
+:: Create simplified python file (basic version to avoid syntax errors)
 echo import streamlit as st > chatbot_simple\minimal_chat.py
 echo import subprocess >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
@@ -55,29 +55,12 @@ echo     page_icon="🦙", >> chatbot_simple\minimal_chat.py
 echo     layout="centered" >> chatbot_simple\minimal_chat.py
 echo ) >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
-echo # Custom CSS for better appearance >> chatbot_simple\minimal_chat.py
-echo st.markdown(""" >> chatbot_simple\minimal_chat.py
-echo ^<style^> >> chatbot_simple\minimal_chat.py
-echo     .stApp { >> chatbot_simple\minimal_chat.py
-echo         max-width: 1200px; >> chatbot_simple\minimal_chat.py
-echo         margin: 0 auto; >> chatbot_simple\minimal_chat.py
-echo     } >> chatbot_simple\minimal_chat.py
-echo     .chat-header { >> chatbot_simple\minimal_chat.py
-echo         text-align: center; >> chatbot_simple\minimal_chat.py
-echo         margin-bottom: 30px; >> chatbot_simple\minimal_chat.py
-echo     } >> chatbot_simple\minimal_chat.py
-echo     .chat-header h1 { >> chatbot_simple\minimal_chat.py
-echo         color: #FF4B4B; >> chatbot_simple\minimal_chat.py
-echo         font-size: 2.5rem; >> chatbot_simple\minimal_chat.py
-echo     } >> chatbot_simple\minimal_chat.py
-echo ^</style^> >> chatbot_simple\minimal_chat.py
-echo """, unsafe_allow_html=True) >> chatbot_simple\minimal_chat.py
-echo. >> chatbot_simple\minimal_chat.py
-echo # Attractive header with emoji >> chatbot_simple\minimal_chat.py
-echo st.markdown("^<div class='chat-header'^>^<h1^>🦙 LlamaChat AI Assistant^</h1^>^</div^>", unsafe_allow_html=True) >> chatbot_simple\minimal_chat.py
+echo # Simple dark theme styling >> chatbot_simple\minimal_chat.py
+echo st.title("🦙 LlamaChat AI Assistant") >> chatbot_simple\minimal_chat.py
 echo st.markdown("*Powered by Llama 2 - Your local AI assistant*") >> chatbot_simple\minimal_chat.py
 echo st.markdown("---") >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
+echo # Initialize chat history >> chatbot_simple\minimal_chat.py
 echo if "messages" not in st.session_state: >> chatbot_simple\minimal_chat.py
 echo     st.session_state.messages = [] >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
@@ -91,11 +74,11 @@ echo prompt = st.chat_input("Ask me anything...") >> chatbot_simple\minimal_chat
 echo if prompt: >> chatbot_simple\minimal_chat.py
 echo     # Add user message to chat history >> chatbot_simple\minimal_chat.py
 echo     st.session_state.messages.append({"role": "user", "content": prompt}) >> chatbot_simple\minimal_chat.py
-echo     # Display user message in chat message container >> chatbot_simple\minimal_chat.py
+echo     # Display user message >> chatbot_simple\minimal_chat.py
 echo     with st.chat_message("user"): >> chatbot_simple\minimal_chat.py
 echo         st.markdown(prompt) >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
-echo     # Display assistant response in chat message container >> chatbot_simple\minimal_chat.py
+echo     # Display assistant response >> chatbot_simple\minimal_chat.py
 echo     with st.chat_message("assistant"): >> chatbot_simple\minimal_chat.py
 echo         message_placeholder = st.empty() >> chatbot_simple\minimal_chat.py
 echo         message_placeholder.markdown("Thinking...") >> chatbot_simple\minimal_chat.py
