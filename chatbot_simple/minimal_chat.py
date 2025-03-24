@@ -1,7 +1,7 @@
 import streamlit as st 
 import subprocess 
  
-st.title("Minimal Ollama Chatbot") 
+st.title("LlamaChat AI Assistant") 
  
 if "messages" not in st.session_state: 
     st.session_state.messages = [] 
@@ -12,7 +12,7 @@ for message in st.session_state.messages:
         st.markdown(message["content"]) 
  
 # User input 
-prompt = st.chat_input("Message TinyLlama...") 
+prompt = st.chat_input("Ask me anything...") 
 if prompt: 
     # Add user message to chat history 
     st.session_state.messages.append({"role": "user", "content": prompt}) 

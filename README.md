@@ -2,14 +2,14 @@
 
 An end-to-end open-source chatbot project that leverages Langchain, local Llama 2 model via Ollama, FastAPI with LangServe, and Streamlit.
 
-![Llama 2 Chatbot](https://img.shields.io/badge/Llama%202-Chatbot-yellow)
+![LlamaChat AI Assistant](https://img.shields.io/badge/LlamaChat-AI%20Assistant-yellow)
 ![Langchain](https://img.shields.io/badge/Langchain-Framework-blue)
 ![FastAPI](https://img.shields.io/badge/FastAPI-API-green)
 ![Streamlit](https://img.shields.io/badge/Streamlit-UI-red)
 
 ## Project Overview
 
-This project demonstrates how to build a complete chatbot application using fully open-source components, without requiring any API keys or cloud services. The chatbot is powered by the Llama 2 model running locally through Ollama and is accessible through both a direct Streamlit interface and a FastAPI service.
+This project demonstrates how to build a complete chatbot application using fully open-source components, without requiring any API keys or cloud services. The LlamaChat AI Assistant is powered by the Llama 2 model running locally through Ollama and is accessible through both a direct Streamlit interface and a FastAPI service.
 
 ## Technologies Used
 

@@ -1,6 +1,6 @@
 @echo on
 echo ========================================
-echo Streamlit Chatbot with Browser Launch
+echo LlamaChat AI Assistant - Launcher
 echo ========================================
 echo.
 
@@ -29,14 +29,14 @@ if %errorlevel% equ 0 (
 
 :: Create a very simple chatbot that we know should work
 echo.
-echo Creating a minimal chatbot...
+echo Creating LlamaChat AI Assistant...
 mkdir chatbot_simple 2>nul
 
 :: Create the simplest possible Ollama chatbot
 echo import streamlit as st > chatbot_simple\minimal_chat.py
 echo import subprocess >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
-echo st.title("Minimal Ollama Chatbot") >> chatbot_simple\minimal_chat.py
+echo st.title("LlamaChat AI Assistant") >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
 echo if "messages" not in st.session_state: >> chatbot_simple\minimal_chat.py
 echo     st.session_state.messages = [] >> chatbot_simple\minimal_chat.py
@@ -47,7 +47,7 @@ echo     with st.chat_message(message["role"]): >> chatbot_simple\minimal_chat.p
 echo         st.markdown(message["content"]) >> chatbot_simple\minimal_chat.py
 echo. >> chatbot_simple\minimal_chat.py
 echo # User input >> chatbot_simple\minimal_chat.py
-echo prompt = st.chat_input("Message TinyLlama...") >> chatbot_simple\minimal_chat.py
+echo prompt = st.chat_input("Ask me anything...") >> chatbot_simple\minimal_chat.py
 echo if prompt: >> chatbot_simple\minimal_chat.py
 echo     # Add user message to chat history >> chatbot_simple\minimal_chat.py
 echo     st.session_state.messages.append({"role": "user", "content": prompt}) >> chatbot_simple\minimal_chat.py
@@ -76,12 +76,12 @@ echo             message_placeholder.markdown(f"Error: {str(e)}") >> chatbot_sim
 
 echo.
 echo ========================================
-echo Starting Streamlit and opening browser...
+echo Starting LlamaChat AI Assistant and opening browser...
 echo ========================================
 echo.
 
 :: Start the Streamlit server in a new window
-start "Streamlit Server" cmd /c "cd chatbot_simple && %PYTHON_CMD% -m streamlit run minimal_chat.py"
+start "LlamaChat AI Assistant" cmd /c "cd chatbot_simple && %PYTHON_CMD% -m streamlit run minimal_chat.py"
 
 :: Wait for Streamlit to start
 echo Waiting for Streamlit to initialize...
